@@ -13,7 +13,7 @@ import { ThemeSwitcher } from "./switch-theme";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-foreground text-white">
+    <footer className="bg-black text-white dark:bg-black border-t border-slate-800 px-4 md:px-10 ">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Organization Info */}
@@ -29,10 +29,10 @@ export default function Footer() {
               </div>
               <div>
                 <div className="text-sm font-bold leading-tight">
-                  BADAN EKSEKUTIF MAHASISWA
+                  DEWAN EKSEKUTIF MAHASISWA
                 </div>
                 <div className="text-sm font-bold leading-tight">
-                  KELUARGA MAHASISWA
+                  KABINET REVOLUSI
                 </div>
                 <div className="text-xs text-gray-400">
                   UIN WALISONGO SEMARANG
@@ -69,9 +69,8 @@ export default function Footer() {
                 <Youtube size={20} />
               </Link>
             </div>
-            
+
             <div className="mt-6">
-            
               <ThemeSwitcher />
             </div>
           </div>
@@ -129,14 +128,15 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-         
+
           <div>
             <h3 className="text-lg font-bold mb-6">Kontak</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-primary mr-3 mt-0.5" />
                 <span className="text-gray-400">
-                  Jl. Raya Semarang No. 1, Semarang, Jawa Tengah, Indonesia
+                  Jl. Prof. Dr. Hamka Km 02, Kelurahan Tambakaji, Kecamatan
+                  Ngaliyan, Kota Semarang, Jawa Tengah 50185
                 </span>
               </li>
               <li className="flex items-center">
@@ -153,8 +153,8 @@ export default function Footer() {
       </div>
       <div className="bg-black py-4">
         <div className="container mx-auto px-4 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} BEM UIN Walisongo Semarang. All
-          rights reserved.
+          &copy; {new Date().getFullYear()} DEWAN EKSEKUTIF MAHASISWA UIN
+          WALISONGO SEMARANG. All rights reserved.
         </div>
       </div>
     </footer>
