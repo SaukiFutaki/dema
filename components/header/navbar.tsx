@@ -55,18 +55,18 @@ export default function Navbar() {
             <div className={`relative transition-all duration-300 ${
               scrolled ? "h-10 w-10" : "h-12 w-12"
             }`}>
-              <Image src="/fix_logo.png" alt="Logo"  width={1000} height={1000} className="" sizes="40" />
+              <Image src="/logo.png" alt="Logo"  width={1080} height={1080} className="" sizes="60" />
             </div>
             <div className="hidden md:block">
               <div className={`font-bold leading-tight transition-all duration-300 ${
                 scrolled ? "text-xs" : "text-sm"
-              }`}>DEWAN EKSEKUTIF MAHASISWA </div>
+              }`}>WEBSITE RESMI </div>
               <div className={`font-bold leading-tight transition-all duration-300 ${
                 scrolled ? "text-xs" : "text-sm"
-              }`}>KABINET REVOLUSI</div>
+              }`}>DESA LOSARI, KECAMATAN SUMOWONO</div>
               <div className={`transition-all duration-300 ${
                 scrolled ? "text-[10px]" : "text-xs"
-              }`}>UIN WALISONGO</div>
+              }`}>KABUPATEN SEMARANG</div>
             </div>
           </Link>
 

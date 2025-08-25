@@ -8,6 +8,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
+  BreadcrumbPage,
   BreadcrumbSeparator
 } from "../ui/breadcrumb"
 
@@ -62,7 +63,9 @@ export function BeritaDetailHeader({ article }: { article: Article }) {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <span className="max-w-[200px] truncate">{article.title}</span>
+                <BreadcrumbPage>
+                  {article.title}
+                </BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>

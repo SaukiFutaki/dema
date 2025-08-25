@@ -92,9 +92,9 @@ const tentangKamiItems: {
     icon: UsersIcon,
   },
   {
-    title: "Kementerian & Departemen",
-    href: "/tentang-kami/kementerian",
-    description: "Informasi tentang kementerian dan departemen dalam BEM.",
+    title: "Struktur Organisasi",
+    href: "/tentang-kami/struktur",
+    description: "Struktur organisasi DEMA Universitas dan departemen-departemennya.",
     icon: HandshakeIcon,
   },
   {
