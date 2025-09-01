@@ -1,10 +1,7 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { roboto } from "../fonts";
 export default function ChairmanMessage() {
   return (

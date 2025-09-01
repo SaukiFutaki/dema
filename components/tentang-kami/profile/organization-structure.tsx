@@ -1,13 +1,9 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { 
-  Card, 
-  CardContent, 
-  CardHeader, 
-  CardTitle 
-} from "@/components/ui/card"
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { dataStruktur } from "@/lib/data";
 
 export function OrganizationStructure() {
   // Animation variants
@@ -16,38 +12,38 @@ export function OrganizationStructure() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
-  }
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { 
-        duration: 0.5 
-      }
-    }
-  }
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
 
   const subtitleVariants = {
     hidden: { opacity: 0, x: -20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       x: 0,
-      transition: { 
-        duration: 0.5 
-      }
-    }
-  }
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
 
   return (
     <section className="py-16 px-4 bg-white dark:bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -63,10 +59,10 @@ export function OrganizationStructure() {
             initial="hidden"
             animate="visible"
             viewport={{ once: true }}
-
             className="text-muted-foreground max-w-3xl mx-auto"
           >
-            BEM KM UGM terdiri dari berbagai departemen yang bekerja sama untuk mencapai visi dan misi organisasi.
+            BEM KM UGM terdiri dari berbagai departemen yang bekerja sama untuk
+            mencapai visi dan misi organisasi.
           </motion.p>
         </div>
         <motion.div
@@ -76,37 +72,25 @@ export function OrganizationStructure() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
-          {[
-            "Ketua & Wakil Ketua",
-            "Sekretaris Jenderal",
-            "Bendahara Umum",
-            "Departemen Komunikasi & Informasi",
-            "Departemen Pengembangan Sumber Daya Mahasiswa",
-            "Departemen Sosial Politik",
-          ].map((dept, index) => (
+          {dataStruktur.map((dept, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
-                transition: { duration: 0.2 }
+                transition: { duration: 0.2 },
               }}
             >
               <Card className="h-full">
                 <CardHeader>
-                  <CardTitle className="text-center">{dept}</CardTitle>
+                  <CardTitle className="text-center">{dept.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-center text-muted-foreground">
-                    Bertanggung jawab dalam {index < 3 ? "pengelolaan organisasi" : "pelaksanaan program kerja"} sesuai
-                    dengan bidangnya.udah
-                  </p>
-                </CardContent>
+                <CardContent>{dept.description}</CardContent>
               </Card>
             </motion.div>
           ))}
         </motion.div>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -122,5 +106,5 @@ export function OrganizationStructure() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

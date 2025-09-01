@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import CreativeBtn from "../button/creative-button";
+import { newsItems } from "@/lib/data";
 
 export default function BlogSection() {
   const container = {
@@ -28,32 +29,30 @@ export default function BlogSection() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          {[1, 2, 3].map((itemi) => (
+          {newsItems.slice(-3).map((itemi) => (
             <motion.div
-              key={itemi}
+              key={itemi.id}
               variants={item}
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
               className="bg-white rounded-lg shadow-md overflow-hidden border border-border/10"
             >
               <div className="relative h-48">
                 <Image
-                  src={`https://images.unsplash.com/photo-1745613184657-3c8dcd5f079a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8`}
-                  alt={`News ${item}`}
+                  src={itemi.image}
+                  alt={`News ${itemi.title}`}
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="p-6">
-                <p className="text-sm text-foreground/60 mb-2 dark:text-secondary">12 Mei 2023</p>
+                <p className="text-sm text-foreground/60 mb-2 dark:text-secondary">{itemi.date}</p>
                 <h3 className="text-xl font-bold mb-2 dark:text-secondary">
-                    Judul Berita {itemi}
-                    </h3>
-                <p className="text-foreground/70 mb-4 dark:text-secondary">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+                    {itemi.title}
+                </h3>
+               
                 <Link
-                  href={`/berita/${itemi}`}
+                  href={`${itemi.url}`}
+                  target="_blank"
                   className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
                 >
                   Baca selengkapnya <ChevronRight className="h-4 w-4 ml-1" />

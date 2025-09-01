@@ -1,12 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { 
-  Card, 
-  CardContent, 
-  CardHeader, 
-  CardTitle 
-} from "@/components/ui/card"
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function VisionMission() {
   return (
@@ -29,13 +24,14 @@ export function VisionMission() {
               </CardHeader>
               <CardContent>
                 <p className="text-center text-muted-foreground">
-                  &#34;Terwujudnya DEMA UIN Walisongo Semarang sebagai organisasi mahasiswa yang progresif, responsif, dan
-                  berlandaskan nilai-nilai keislaman dalam mewujudkan kampus yang inklusif dan berdampak.&#34;
+                  &#34;Terwujudnya Desa Losari sebagai desa yang tentram, damai,
+                  sehat, aman, dan sejahtera melalui sektor
+                  agrobisnis dan pertanian.&#34;
                 </p>
               </CardContent>
             </Card>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -50,19 +46,39 @@ export function VisionMission() {
                 <ul className="text-muted-foreground space-y-2">
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    Meningkatkan kualitas kaderisasi dan kepemimpinan mahasiswa berbasis nilai-nilai keislaman dan keindonesiaan.
+                    Meningkatkan kualitas sumber daya manusia yang beriman,
+                    sehat, cerdas, dan berdaya saing.
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    Menjadi saluran aspirasi mahasiswa dan memperkuat advokasi terhadap isu-isu kampus dan sosial.
+                    Mengembangkan produk unggulan berbasis potensi lokal,
+                    terutama di bidang pertanian.
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    Mendorong kolaborasi lintas fakultas dan organisasi untuk menciptakan gerakan mahasiswa yang solutif dan kolaboratif.
+                    Menciptakan pemerintahan desa yang bersih, transparan,
+                    profesional, dan akuntabel.
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    Mewujudkan program kerja yang inklusif, edukatif, dan berdampak nyata bagi sivitas akademika dan masyarakat.
+                    Membangun infrastruktur merata untuk mendukung pelayanan
+                    dasar dan pembangunan ekonomi.
+                  </li>
+
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    Mendorong partisipasi masyarakat dalam pembangunan dengan
+                    menjunjung kesetaraan dan perlindungan anak.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    Mengelola sumber daya alam secara berkelanjutan dengan
+                    menjaga kelestarian lingkungan.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    Meningkatkan kesadaran hukum, kesehatan, dan keamanan
+                    melalui kegiatan sosial dan edukatif.
                   </li>
                 </ul>
               </CardContent>
@@ -71,5 +87,5 @@ export function VisionMission() {
         </div>
       </div>
     </section>
-  )
+  );
 }

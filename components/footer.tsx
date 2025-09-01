@@ -1,15 +1,14 @@
-import Link from "next/link";
-import Image from "next/image";
 import {
   Facebook,
   Instagram,
-  Twitter,
-  Youtube,
   Mail,
   MapPin,
   Phone,
+  Twitter,
+  Youtube,
 } from "lucide-react";
-import { ThemeSwitcher } from "./switch-theme";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -21,7 +20,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3 mb-6">
               <div className="relative h-12 w-12">
                 <Image
-                  src="https://placehold.co/48x48.png"
+                  src="/logo.png"
                   alt="Logo"
                   fill
                   className="object-contain"
@@ -29,14 +28,12 @@ export default function Footer() {
               </div>
               <div>
                 <div className="text-sm font-bold leading-tight">
-                  DEWAN EKSEKUTIF MAHASISWA
+                  WEBSITE RESMI
                 </div>
                 <div className="text-sm font-bold leading-tight">
-                  KABINET REVOLUSI
+                  DESA LOSARI, KECAMATAN SUMOWONO
                 </div>
-                <div className="text-xs text-gray-400">
-                  UIN WALISONGO SEMARANG
-                </div>
+                <div className="text-xs text-gray-400">KABUPATEN SEMARANG</div>
               </div>
             </div>
             <p className="text-gray-400 mb-6">
@@ -45,8 +42,9 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="#"
+                href="https://www.facebook.com/profile.php?id=100073587124127&locale=id_ID"
                 className="text-gray-400 hover:text-primary transition-colors"
+                target="_blank"
               >
                 <Facebook size={20} />
               </Link>
@@ -70,9 +68,9 @@ export default function Footer() {
               </Link>
             </div>
 
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <ThemeSwitcher />
-            </div>
+            </div> */}
           </div>
           {/* Quick Links */}
           <div>
@@ -102,14 +100,7 @@ export default function Footer() {
                   Berita Terbaru
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/kajian"
-                  className="text-gray-400 hover:text-primary transition-colors"
-                >
-                  Kajian
-                </Link>
-              </li>
+           
               <li>
                 <Link
                   href="/galeri"
@@ -118,14 +109,7 @@ export default function Footer() {
                   Galeri
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/kontak"
-                  className="text-gray-400 hover:text-primary transition-colors"
-                >
-                  Kontak
-                </Link>
-              </li>
+          
             </ul>
           </div>
 
@@ -135,17 +119,25 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-primary mr-3 mt-0.5" />
                 <span className="text-gray-400">
-                  Jl. Prof. Dr. Hamka Km 02, Kelurahan Tambakaji, Kecamatan
-                  Ngaliyan, Kota Semarang, Jawa Tengah 50185
+                  Kec. Sumowono, Kabupaten Semarang, Jawa Tengah 50611
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-primary mr-3" />
-                <span className="text-gray-400">+62 274 123456</span>
+                <a
+                  href="https://wa.me/6285236564119?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20mengenai%20sesuatu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-primary transition-colors"
+                >
+                  +6285236564119
+                </a>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-primary mr-3" />
-                <span className="text-gray-400">info@bemuinws.ac.id</span>
+                <span className="text-gray-400">
+                  kantordesalosari@gmail.com
+                </span>
               </li>
             </ul>
           </div>
@@ -153,8 +145,7 @@ export default function Footer() {
       </div>
       <div className="bg-black py-4">
         <div className="container mx-auto px-4 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} DEWAN EKSEKUTIF MAHASISWA UIN
-          WALISONGO SEMARANG. All rights reserved.
+          &copy; {new Date().getFullYear()} DESA LOSARI, KECAMATAN SUMOWONO. All rights reserved.
         </div>
       </div>
     </footer>

@@ -14,21 +14,20 @@ export function AboutSection() {
           viewport={{ once: true }}
           className="flex flex-col md:flex-row items-center gap-12"
         >
-          <div className="md:w-1/2">
+        <div className="md:w-1/2">
             <h2 className="text-3xl font-bold mb-6 dark:text-white">
-              Tentang DEMA UIN Walisongo
+              Tentang DESA LOSARI
             </h2>
             <div className="w-24 h-1 bg-primary mb-6"></div>
             <p className="dark:text-white mb-4">
-              Dewan Eksekutif Mahasiswa Universitas Islam Negeri (UIN) Walisongo Semarang merupakan lembaga eksekutif mahasiswa tingkat universitas yang berperan penting dalam mewadahi aspirasi serta memfasilitasi pengembangan potensi mahasiswa.
-            </p>
+              Desa Losari merupakan salah satu desa di Kecamatan Sumowono, Kabupaten Semarang, Jawa Tengah. Terletak di lereng barat Gunung Ungaran dengan ketinggian sekitar 900 mdpl, desa ini memiliki udara sejuk dengan suhu rata-rata harian 23–25°C.            </p>
             <p className=" mb-4 dark:text-white">
-              DEMA UIN Walisongo memiliki visi untuk membentuk mahasiswa yang aktif, kritis, dan berintegritas dalam menjawab tantangan zaman melalui kegiatan yang bersifat akademis, sosial, dan keagamaan.
+              Dengan luas wilayah 293,71 hektar, Desa Losari terbagi dalam 4 dusun: Dusun Bantir, Dusun Kalidukuh, Dusun Losari, dan Dusun Kaliliseng. Mayoritas penduduk bermata pencaharian sebagai petani, buruh, dan pelaku usaha kecil dengan hasil utama pertanian padi, palawija, kopi, serta peternakan ayam dan perikanan air tawar.
             </p>
             <p className="dark:text-white mb-4">
-              Dalam menjalankan fungsinya, DEMA berkomitmen menjaga nilai-nilai keislaman, kebangsaan, dan kemahasiswaan demi terciptanya kehidupan kampus yang dinamis, inklusif, serta berdampak positif bagi masyarakat luas.
+              Desa Losari berkomitmen untuk terus berkembang sebagai desa yang maju, mandiri, dan sejahtera, sekaligus menjaga tradisi, gotong royong, serta kearifan lokal masyarakatnya.
             </p>
-          </div>
+          </div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -37,8 +36,8 @@ export function AboutSection() {
             className="md:w-1/2"
           >
             <Image
-              src="https://images.unsplash.com/photo-1746698100169-a8e3fc9cd123?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1N3x8fGVufDB8fHx8fA%3D%3D"
-              alt="About DEMA UIN Walisongo"
+              src="/profil-page.jpg"
+              alt="About Desa Losari"
               width={600}
               height={500}
               className="rounded-lg shadow-lg"

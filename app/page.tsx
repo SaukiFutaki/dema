@@ -1,8 +1,6 @@
 import BlogSection from "@/components/home/blog-section";
 import ChairmanMessage from "@/components/home/chairman-message";
-import Kajiansection from "@/components/home/kajian-section";
 import HeroSection from "@/components/home/title-hero-section";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -28,7 +26,7 @@ export default function Home() {
       <BlogSection />
 
       {/* Studies/Research Section */}
-      <Kajiansection />
+      {/* <Kajiansection /> */}
     </div>
   );
 }
