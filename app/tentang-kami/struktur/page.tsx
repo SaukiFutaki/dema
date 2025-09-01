@@ -1,6 +1,6 @@
 import { StructureHeader } from "@/components/tentang-kami/struktur/structure-header";
 import { CabinetInfo } from "@/components/tentang-kami/struktur/cabinet-info";
-import { OrganizationChart } from "@/components/tentang-kami/struktur/organization-chart";
+
 import { DepartmentSection } from "@/components/tentang-kami/struktur/department-section";
 
 export default function StrukturPage() {
