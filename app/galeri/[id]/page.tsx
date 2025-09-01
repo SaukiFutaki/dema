@@ -170,8 +170,8 @@ async function getRelatedGalleries(id: string, category: string) {
   return allGalleries.filter((gallery) => gallery.id.toString() !== id).slice(0, 3)
 }
 
-export default async function GaleriDetailPage({ params }: { params: { id: string } }) {
-  const gallery = await getGalleryData(params.id)
+export default async function GaleriDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const gallery = await getGalleryData((await params).id)
 
   if (!gallery) {
     return (
@@ -182,7 +182,7 @@ export default async function GaleriDetailPage({ params }: { params: { id: strin
     )
   }
 
-  const relatedGalleries = await getRelatedGalleries(params.id, gallery.category)
+  const relatedGalleries = await getRelatedGalleries((await params).id, gallery.category)
 
   return (
     <div className="flex flex-col min-h-screen">
